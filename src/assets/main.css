@@ -1,35 +1,67 @@
-@import './base.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
-}
-
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
-}
-
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
+@layer base {
+  html {
+    @apply font-mono;
   }
 }
+:root {
+  --primary-bg: rgb(13, 24, 33);
+  --on-primary-bg: rgb(52, 73, 102);
+  --primary-text: rgb(230, 170, 206);
+  --primary-border: rgb(240, 244, 239);
+  --primary-highlight: rgb(191, 204, 148);
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
+  --secondary-bg: #9d5be3;
+  --on-secondary-bg: #123;
+  --secondary-text: rgb(49, 183, 85);
+  --secondary-border: #2a8709;
+}
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+/* Remove arrows from number input field */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+body {
+  height: 100%;
+  background-color: var(--primary-bg);
+}
+
+h1 {
+  @apply text-2xl text-primary-text;
+}
+
+h2 {
+  @apply text-xl text-primary-text;
+}
+
+h3 {
+  @apply text-lg text-primary-text;
+}
+
+p {
+  @apply text-primary-text;
+}
+
+.linkbtn {
+  @apply border border-primary-border rounded-md px-4 py-2 shadow-md text-primary-text hover:text-on-primary-bg bg-primary-bg hover:bg-primary-highlight transition-colors;
+}
+
+.letter-tile {
+  @apply flex justify-center items-center rounded-md bg-primary-highlight hover:bg-primary-bg text-primary-bg hover:text-primary-text border border-primary-border;
+}
+
+.btn {
+  @apply border-2 border-primary-border text-primary-text rounded-lg px-4 py-2 shadow-lg;
 }
