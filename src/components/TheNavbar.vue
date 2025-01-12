@@ -1,5 +1,5 @@
 <template>
-  <nav class="flex justify-center py-4 gap-x-8 bg-on-primary-bg mb-4">
+  <nav class="flex justify-center py-4 gap-x-8 bg-on-primary-bg drop-shadow-lg">
     <RouterLink v-for="route in myroutes" :key="route.path" :to="route.path" class="linkbtn">
       {{ route.name }}
     </RouterLink>

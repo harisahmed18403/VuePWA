@@ -55,7 +55,7 @@ p {
 }
 
 .linkbtn {
-  @apply border border-primary-border rounded-md px-4 py-2 shadow-md text-primary-text hover:text-on-primary-bg bg-primary-bg hover:bg-primary-highlight transition-colors;
+  @apply border border-primary-border rounded-md px-4 py-2 text-primary-text hover:text-on-primary-bg bg-primary-bg hover:bg-primary-highlight transition-colors;
 }
 
 .letter-tile {
@@ -64,4 +64,8 @@ p {
 
 .btn {
   @apply border-2 border-primary-border text-primary-text rounded-lg px-4 py-2 shadow-lg;
+}
+
+.btn-small {
+  @apply rounded-md border border-primary-border text-primary-text w-5;
 }
